@@ -5,9 +5,9 @@ This project implements a File Deduplicator which reports the true duplicates of
 ## Implementation
 We have three seperate hashmaps  
 
-Hard Links -> <inode_number,          list_of_paths>\n
-Soft Links -> <target_inode_number,   list_of_paths>\n
-Duplicates -> <md5_hash,              list_of_paths>\n
+Hard Links -> <inode_number,          list_of_paths>
+Soft Links -> <target_inode_number,   list_of_paths>
+Duplicates -> <md5_hash,              list_of_paths>
 
 We use [nftw()](https://pubs.opengroup.org/onlinepubs/9799919799/functions/nftw.html) to traverse through the file directory computing their md5_hash and placing them into all three hashes. Then we print the output in order.
 
