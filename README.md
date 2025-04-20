@@ -9,7 +9,7 @@ Hard Links -> <inode_number,          list_of_paths>\n
 Soft Links -> <target_inode_number,   list_of_paths>\n
 Duplicates -> <md5_hash,              list_of_paths>\n
 
-We use [https://pubs.opengroup.org/onlinepubs/9799919799/functions/nftw.html] nftw() to traverse through the file directory computing their md5_hash and placing them into all three hashes. Then we print the output in order.
+We use [nftw()](https://pubs.opengroup.org/onlinepubs/9799919799/functions/nftw.html) to traverse through the file directory computing their md5_hash and placing them into all three hashes. Then we print the output in order.
 
 ```
   ./detect_dups <file_name> 
