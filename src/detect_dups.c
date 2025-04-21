@@ -187,9 +187,10 @@ int main(int argc, char **argv) {
 	double ms = ((double) diff / (double) CLOCKS_PER_SEC) * 1000;
 	printf("Total Time Taken: %.2lfms\n", ms);
 
-	free_pathlist(HardLinks);
-	free_pathlist(SoftLinks);
-	free_pathlist(Duplicates);
+	// NOTE(Rainy): It's better to not free memory and let the OS handle that. 
+//	free_pathlist(HardLinks);
+//	free_pathlist(SoftLinks);
+//	free_pathlist(Duplicates);
 	
 	
     } else {
