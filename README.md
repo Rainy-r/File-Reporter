@@ -42,4 +42,9 @@ File 1
 Under the MD5 consists of different files with their respective Hard Links. These files are true duplicates. 
 NOTE: Soft Links can have Hard links too. When I first started working on this project that's what confused me most. 
 
+ ## Why this is terrible
+
+ - I'm using arrays instead of linked lists to allocate memory for file paths this is just bad since I'm allocating extra memory which never gets used if you try to run this program on a insanely huge batch of files the OS just decides to kill it cause it's taking too much memory.
+ - Alot of this code could be compressed to make it more readable and modular 
+
 Credits to Troy D. Hanson, Arthur O'Dwyer for the UTHash library
